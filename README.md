@@ -47,3 +47,4 @@ Replace the value of the `myEditionDropContractAddress` inside [`index.tsx`](/pa
 ## Join our Discord!
 
 For any questions, suggestions, join our Discord at [https://discord.gg/thirdweb](https://discord.gg/thirdweb).
+# OBYC-Labs-ERC1155-ClaimSite
