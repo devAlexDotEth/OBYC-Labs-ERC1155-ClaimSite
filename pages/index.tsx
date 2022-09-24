@@ -18,6 +18,7 @@ const myEditionDropContractAddress =
 const tokenId = 2;
 const tokenId2 = 3;
 const tokenId3 = 4;
+const url2 = "https://obyclabs.com/"
 
 
 const Home: NextPage = () => {
@@ -124,8 +125,8 @@ const Home: NextPage = () => {
                 colorMode="dark"
                 className="botonMint"
               >
-                Toxic Salmon Barrel 
-                Mint {quantity} NFT{quantity > 1 ? "s" : ""}
+                Mint Toxic Salmon Barrel |
+               Qty: {quantity}{quantity > 1 ? "s" : ""}
               </Web3Button>
 
 
@@ -142,8 +143,8 @@ const Home: NextPage = () => {
                 colorMode="dark"
                 className="botonMint"
               >
-                Nanobot Stage 2
-                Mint {quantity} NFT{quantity > 1 ? "s" : ""}
+                Mint Stage 2 Nanobot |
+               Qty: {quantity}{quantity > 1 ? "s" : ""}
               </Web3Button>
 
               <Web3Button
@@ -159,8 +160,8 @@ const Home: NextPage = () => {
                 colorMode="dark"
                 className="botonMint"
               >
-                Bio-Infused Honey
-                Mint {quantity} NFT{quantity > 1 ? "s" : ""}
+               Bid Bio-Infused Honey |
+             Qty: {quantity}{quantity > 1 ? "s" : ""}
               </Web3Button>
 
 
@@ -172,8 +173,9 @@ const Home: NextPage = () => {
       <img
         src={`/obyclabs.png`}
         alt="OBYC Logo"
-        width={135}
+        width={125}
         className={styles.buttonGapTop}
+        onClick={() => window.open(url2, "_blank")}
       />
     </div>
   );

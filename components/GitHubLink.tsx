@@ -2,12 +2,13 @@ import React from "react";
 
 export default function ThirdwebGuideFooter() {
   const url = "https://thirdweb.com/okaybearsyc.eth/OBYCLabs/1.0.0%20by%20devAlex.%E1%B4%B1%E1%B5%80%E1%B4%B4";
+  const url2 = "https://obyclabs.com/"
   return (
     <>
       <div
         style={{
           position: "fixed",
-          bottom: -120,
+          bottom: -95,
           right: -80,
           height: 300,
           width: 150,
@@ -29,8 +30,8 @@ export default function ThirdwebGuideFooter() {
       >
         <img
           src={"/obyclabs.png"}
-          width={40}
-          height={40}
+          width={69}
+          height={69}
           role="button"
           style={{ cursor: "pointer" }}
           onClick={() => window.open(url, "_blank")}
