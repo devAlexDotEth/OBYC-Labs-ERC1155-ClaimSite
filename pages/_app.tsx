@@ -5,21 +5,21 @@ import Head from "next/head";
 import ThirdwebGuideFooter from "../components/GitHubLink";
 
 // This is the chainId your dApp will work on.
-const activeChainId = ChainId.Mumbai;
+const activeChainId = ChainId.Mainnet;
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThirdwebProvider desiredChainId={activeChainId}>
       <Head>
-        <title>thirdweb Edition Drop Minting Customizable Page</title>
+        <title>OBYC Labs™</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="Learn How To Use Thirdweb's Edition Drop contract and create a customizable Edition Drop minting page"
+          content="The OBYC Hazmat Division consists of 10,000 Lab Items with 7,777 L1 🧪 🐟 items being airdropped to all Okay Bear Yacht Club Bears. Choose your path wisely with L2 🧪🐟 items mint. The official snapshot was taken on 9/19/2022 at 9:19 PM EST. Instructions to follow..."
         />
         <meta
           name="keywords"
-          content="Thirdweb, thirdweb Edition drop, how to make thirdweb nft drop, how to make nft collection thirdweb"
+          content="OBYC Labs, Hazmat Division Edition drop"
         />
       </Head>
       <Component {...pageProps} />

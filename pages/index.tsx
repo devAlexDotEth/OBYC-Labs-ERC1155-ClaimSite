@@ -12,10 +12,13 @@ import styles from "../styles/Theme.module.css";
 
 // Put Your Edition Drop Contract address from the dashboard here
 const myEditionDropContractAddress =
-  "0x11232C2cd1757C3e4f78dcda318Bdfc6Bc5873A3";
+  "0x86bb4912EA47E07953C527d9CCC40f905ead1931";
 
 // Put your token ID here
-const tokenId = 0;
+const tokenId = 2;
+const tokenId2 = 3;
+const tokenId3 = 4;
+
 
 const Home: NextPage = () => {
   const { contract: editionDrop } = useContract(myEditionDropContractAddress);
@@ -54,8 +57,8 @@ const Home: NextPage = () => {
           {/* Image Preview of NFTs */}
           <img
             className={styles.image}
-            src={nftMetadata?.metadata?.image}
-            alt={`${nftMetadata?.metadata?.name} preview image`}
+            src={"logo.png"}
+            alt={`${"logo.png"} preview image`}
           />
 
           {/* Amount claimed so far */}
@@ -104,6 +107,8 @@ const Home: NextPage = () => {
               >
                 +
               </button>
+
+              
             </div>
             <div className={styles.mintContainer}>
               <Web3Button
@@ -115,19 +120,58 @@ const Home: NextPage = () => {
                 onSuccess={(result) => alert("Claimed!")}
                 // If the function fails, we can do something here.
                 onError={(error) => alert(error?.message)}
-                accentColor="#f213a4"
+                accentColor="#060606"
                 colorMode="dark"
+                className="botonMint"
               >
+                Toxic Salmon Barrel 
                 Mint {quantity} NFT{quantity > 1 ? "s" : ""}
               </Web3Button>
+
+
+              <Web3Button
+                contractAddress={myEditionDropContractAddress}
+                action={async (contract) =>
+                  await contract.erc1155.claim(tokenId2, quantity)
+                }
+                // If the function is successful, we can do something here.
+                onSuccess={(result) => alert("Claimed!")}
+                // If the function fails, we can do something here.
+                onError={(error) => alert(error?.message)}
+                accentColor="#060606"
+                colorMode="dark"
+                className="botonMint"
+              >
+                Nanobot Stage 2
+                Mint {quantity} NFT{quantity > 1 ? "s" : ""}
+              </Web3Button>
+
+              <Web3Button
+                contractAddress={myEditionDropContractAddress}
+                action={async (contract) =>
+                  await contract.erc1155.claim(tokenId3, quantity)
+                }
+                // If the function is successful, we can do something here.
+                onSuccess={(result) => alert("Claimed!")}
+                // If the function fails, we can do something here.
+                onError={(error) => alert(error?.message)}
+                accentColor="#060606"
+                colorMode="dark"
+                className="botonMint"
+              >
+                Bio-Infused Honey
+                Mint {quantity} NFT{quantity > 1 ? "s" : ""}
+              </Web3Button>
+
+
             </div>
           </>
         </div>
       </div>
-      {/* Powered by thirdweb */}{" "}
+      {/* Powered by OBYC Labs */}{" "}
       <img
-        src={`/logo.png`}
-        alt="Thirdweb Logo"
+        src={`/obyclabs.png`}
+        alt="OBYC Logo"
         width={135}
         className={styles.buttonGapTop}
       />

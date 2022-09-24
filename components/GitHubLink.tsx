@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function ThirdwebGuideFooter() {
-  const url = "https://github.com/thirdweb-example/edition-drop";
+  const url = "https://thirdweb.com/okaybearsyc.eth/OBYCLabs/1.0.0%20by%20devAlex.%E1%B4%B1%E1%B5%80%E1%B4%B4";
   return (
     <>
       <div
@@ -28,7 +28,7 @@ export default function ThirdwebGuideFooter() {
         }}
       >
         <img
-          src={"/github.png"}
+          src={"/obyclabs.png"}
           width={40}
           height={40}
           role="button"
